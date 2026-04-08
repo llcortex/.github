@@ -1,134 +1,109 @@
 # llcortex.ai
 
-> Tools for AI and Mankind. From India to the world — building the infrastructure layer for trustworthy AI systems.
+Tools for AI and Humans. Built in India — for the rest of the world.
 
 ---
 
-## 🧠 What is llcortex?
+## What is this?
 
-llcortex is my alter ego. I am Nishchay. I'm a fullstack engineer passionate about making AI infrastructure reliable and accessible to developers everywhere.
+I'm Nishchay. llcortex is my alter ego, lab and long-term bet on where software infrastructure is heading.
 
-My belief:
-"I believe AI systems should be verifiable, traceable, and trustworthy. My tools help developers build AI applications with built-in truth tracking, output verification, and structured reasoning — from prototype to production.
-This is where **human intent meets machine memory**."
+I'm a fullstack engineer. I got tired of AI tooling that's either a wrapper around an API or a prompt trick dressed up as a product. The interesting problem — the one nobody's really solved — is making AI systems that are *auditable*. Where you can trace what happened, why, and whether to trust it. And making life easier for AI.
 
----
-
-## ⚡ Why llcortex
-
-As developers, we love cool names. Thus llcortex.
+That's the thread running through everything I build here.
 
 ---
 
-## 🧩 Core Ideas
+## Projects
 
-### 1. Memory > Data
-We don’t just log events.  
-We build **timelines of understanding**.
+### [DOMglyph](https://domglyph.llcortex.ai) — AI-native design system
 
-### 2. Context is the new API
-Instead of passing parameters,  
-we pass **intent + context**.
+Most design systems answer one question: what does this look like for a human? DOMglyph answers a second one: what does this mean, and how can a machine act on it reliably?
 
-### 3. AI is not trusted by default
-Every action:
-- goes through policy
-- requires validation
-- is treated as a proposal, not a command
+Every component ships with two layers. A visual layer for your users. A semantic layer for AI agents — expressed as `data-ai-*` HTML attributes that stay stable across refactors, style changes, and DOM restructuring.
 
----
+```html
+<button
+  data-ai-id="save-profile"
+  data-ai-role="action"
+  data-ai-action="save-profile"
+  data-ai-state="idle"
+>
+  Save Profile
+</button>
+```
 
-## 🚀 Projects under llcortex
+There's also a runtime inspection API — `window.__DOMGLYPH__` — that lets agents query the interface without guessing:
 
-### 🔹 CortexLog
-A local-first memory timeline for:
-- humans
-- AI agents
-- systems
+```js
+const actions = window.__DOMGLYPH__.getAvailableActions();
+// [{ id: "submit-order", state: "idle", screen: "checkout" }, ...]
 
-Think:
-> git log, but for intelligence
+window.__DOMGLYPH__.trigger("submit-order");
+```
 
----
+The goal: AI-UI interaction that's as reliable as calling an API endpoint. No DOM scraping, no CSS selector brittleness, no guessing from button text.
 
-### 🔹 DOMGlyph (formerly CortexUI)
-A UI layer that exposes:
-- human-readable visuals
-- machine-readable semantics
+Works with React and Vanilla JS. Includes components (ActionButton, FormField, DataTable, Modal, and more), primitives, pattern guides, and devtools for inspecting AI metadata.
 
-So AI can **understand your UI like a developer would**.
+→ [Docs](https://domglyph.llcortex.ai/docs/introduction/what-is-cortexui) · [Demo](https://domglyph-demo.llcortex.ai) · [GitHub](https://github.com/llcortex/DOMGlyph)
 
 ---
 
-### 🔹 (Upcoming) Agent Runtime
-A secure, policy-first agent system where:
-- models propose actions
-- policies decide execution
-- humans stay in control
+### [CortexLog](https://cortexlog.llcortex.ai) — Durable project memory for humans + AI agents
+
+Most systems log events. CortexLog builds timelines of *understanding* — structured memory that both humans and AI agents can navigate, reference, and trust.
+
+Think `git log`, but for reasoning. Not just "what changed" but "what was decided, why, and what context led there."
+
+→ [cortexlog.llcortex.ai](https://cortexlog.llcortex.ai)
 
 ---
 
-## 🏗️ Philosophy
+### Manasvi - Agent Runtime *(upcoming)*
 
-I avoid building:
-- wrappers over APIs
-- prompt hacks
-- one-off AI tools
+A policy-first runtime for AI agents. Models propose actions. Policies decide whether they execute. Humans stay in the loop.
 
-I am working on building:
-> **foundations for the next layer of computing**
+No "just trust the model" shortcuts. It us not your popular red crab.
 
 ---
 
-## 🧑‍💻 About me
+## What I'm not building
 
-I’m a fullstack developer from India 🇮🇳
+- API wrappers
+- Prompt engineering tricks
+- Tools that solve one thing and die in six months
 
-- Building systems end-to-end
-- Exploring AI-native architectures
-- Obsessed with clean abstractions and real-world utility
-
-llcortex is my alter ego, playground, lab, and long-term bet.
+Foundations. That's the slower, harder, compounding bet.
 
 ---
 
-## 🌱 Vision
+## About me
 
-I believe AI systems should be verifiable, traceable, and trustworthy. My tools should help developers build AI applications with built-in truth tracking, output verification, and structured reasoning — from prototype to production.
-I 'llcortex' will be a small part of that shift.
+Fullstack developer from India. I work end-to-end — design, backend, infrastructure. Most interested in AI-native architectures: what does software look like when AI agents are real clients of your system, not just a feature bolted on top?
 
----
-
-## 🤝 Contributing
-
-If this resonates with you:
-- open an issue
-- suggest ideas
-- build something on top
-
-This is still early. That’s the best time to join.
+llcortex is where I think out loud, ship rough things, and iterate in public.
 
 ---
 
-## ☕ Support
+## Get involved
 
-If you like what I’m building:
+This is early. If something here resonates:
+
+- Open an issue
+- Suggest something worth building
+- Build on top and tell me about it
+
+---
+
+## Support
 
 - ⭐ Star the repo
-- Share it with others
-- Or just follow along
-
-(And yes… a coffee helps too ☕)
-
-👉 https://buymeacoffee.com/nishchya
-
-**It helps keep the my projects alive and growing.**
+- Share it with someone who'd care
+- Or: [buymeacoffee.com/nishchya](https://buymeacoffee.com/nishchya)
 
 ---
 
-## 🧭 Final thought
-
-> The future isn’t just AI-powered.  
-> It’s **memory-powered AI**.
-
-Welcome to **llcortex**.
+> The future isn't AI-powered. It's memory-powered AI.
+>
+> Welcome to llcortex.
