@@ -1,4 +1,4 @@
-# llcortex.ai
+# llcortex
 
 Tools for AI and Humans. Built in India — for the rest of the world.
 
