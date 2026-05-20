@@ -60,7 +60,7 @@ Think `git log`, but for reasoning. Not just "what changed" but "what was decide
 
 ---
 
-### Manasvi - Agent Runtime *(beta)*
+### [Manasvi](https://manasvi.llcortex.ai)  - Agent Runtime *(beta)*
 
 A policy-first runtime for AI agents. Models propose actions. Policies decide whether they execute. Humans stay in the loop.
 
