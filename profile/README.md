@@ -60,12 +60,13 @@ Think `git log`, but for reasoning. Not just "what changed" but "what was decide
 
 ---
 
-### Manasvi - Agent Runtime *(upcoming)*
+### Manasvi - Agent Runtime *(beta)*
 
 A policy-first runtime for AI agents. Models propose actions. Policies decide whether they execute. Humans stay in the loop.
 
 No "just trust the model" shortcuts. It us not your popular red crab.
 
+→ [manasvi.llcortex.ai](https://manasvi.llcortex.ai)
 ---
 
 ## What I'm not building
