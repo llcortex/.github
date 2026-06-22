@@ -1,6 +1,6 @@
 # llcortex
 
-Tools for AI and Humans. Built in India — for the rest of the world.
+I am building Tools for AI and Humans. Built in India — for the rest of the world.
 
 ---
 
